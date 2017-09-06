@@ -35,14 +35,14 @@ echo ""
 echo -e [Build and install nanomsg ------------------------------------------------------]
 echo ""
 echo ""
-cd modules/nanomsg
+cd nanomsg
 mkdir build
 cd build
 cmake ..
 make
 sudo make install
 sudo ldconfig
-cd ../../../
+cd ../../
 echo ""
 echo ""
 echo -e [getting and building raspap------------------------------------------------------]
