@@ -1,38 +1,53 @@
-echo -e [Changing deafult pi password]
-#passwd
+echo -e [Changing deafult pi password-----------------------------------------------------]
 echo ""
 echo ""
-echo -e [Updating apt sources]
-sudo apt-get update
+	#passwd
 echo ""
 echo ""
-echo -e [installing pure data and git]
-sudo apt-get --assume-yes install puredata git
+echo -e [Updating apt sources-------------------------------------------------------------]
 echo ""
 echo ""
-echo -e [Updating Submodules]
+	sudo apt-get update
 echo ""
 echo ""
-git submodule update --init --recursive
+echo -e [installing pure data and git-----------------------------------------------------]
+echo ""
+echo ""
+	sudo apt-get --assume-yes install puredata git
+echo ""
+echo ""
+echo -e [Updating Submodules--------------------------------------------------------------]
+echo ""
+echo ""
+	git submodule update --init --recursive
 echo "" 
 echo ""
-#@TODO do we actually need cmake?
-#echo -e [Installing cmake]
-#sudo apt-get install --assume-yes cmake
-echo -e [building abl_link]
-(cd abl_link/external; make)
+#echo -e [Installing cmake----------------------------------------------------------------]
+#echo ""
+#echo ""
+#echo ""#sudo apt-get install --assume-yes cmake
+echo -e [building abl_link----------------------------------------------------------------]
 echo ""
 echo ""
-echo -e [getting and building raspap]
-wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
+	(cd abl_link/external; make)
 echo ""
 echo ""
-echo -e [Update device configuration]
-    sudo cp --backup=numbered support/hostapd.conf /etc/hostapd/.
+echo -e [getting and building raspap------------------------------------------------------]
+echo ""
+echo ""
+	wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
+echo ""
+echo ""
+echo -e [Update device configuration------------------------------------------------------]
+echo ""
+echo ""
+	sudo cp --backup=numbered support/hostapd.conf /etc/hostapd/.
     sudo cp -r support/html/* /var/www/html/.
-    echo ""
 echo ""
 echo ""
-
-#@TODO Setup main.pd to run on boot
-
+echo ""
+#echo ""
+#echo ""
+#@TODO Setup main.pd to run on boot?
+#echo ""
+#echo ""
