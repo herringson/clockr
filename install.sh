@@ -1,4 +1,5 @@
 echo -e [Changing deafult pi password]
+#passwd
 echo ""
 echo ""
 echo -e [Updating apt sources]
@@ -15,5 +16,12 @@ echo ""
 git submodule update --init --recursive
 echo "" 
 echo ""
+echo -e [Installing cmake]
+sudo apt-get install --assume-yes cmake
 echo -e [building abl_link]
-./abl_link/make
+cd abl_link/external
+make
+
+
+#@TODO Setup main.pd to run on boot
+
