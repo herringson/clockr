@@ -25,6 +25,14 @@ echo ""
 echo ""
 echo -e [getting and building raspap]
 wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
+echo ""
+echo ""
+echo -e [Update device configuration]
+    sudo cp --backup=numbered support/hostapd.conf /etc/hostapd/.
+    sudo cp -r support/html/* /var/www/html/.
+    echo ""
+echo ""
+echo ""
 
 #@TODO Setup main.pd to run on boot
 
