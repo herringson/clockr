@@ -19,9 +19,11 @@ echo ""
 echo -e [Installing cmake]
 sudo apt-get install --assume-yes cmake
 echo -e [building abl_link]
-cd abl_link/external
-make
-
+(cd abl_link/external; make)
+echo ""
+echo ""
+echo -e [getting and buildin raspap]
+wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
 
 #@TODO Setup main.pd to run on boot
 
