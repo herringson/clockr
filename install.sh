@@ -32,36 +32,4 @@ echo ""
 	(cd abl_link/external; make)
 echo ""
 echo ""
-echo -e [Build and install nanomsg ------------------------------------------------------]
-echo ""
-echo ""
-cd nanomsg
-mkdir build
-cd build
-cmake ..
-make
-sudo make install
-sudo ldconfig
-cd ../../
-echo ""
-echo ""
-echo -e [getting and building raspap------------------------------------------------------]
-echo ""
-echo ""
-	wget -q https://git.io/voEUQ -O /tmp/raspap && bash /tmp/raspap
-echo ""
-echo ""
-echo -e [Update device configuration per pink-0-------------------------------------------]
-echo ""
-echo ""
-	sudo cp --backup=numbered support/hostapd.conf /etc/hostapd/.
-    sudo cp -r support/html/* /var/www/html/.
-echo ""
-echo ""
-echo ""
 
-#echo ""
-#echo ""
-#@TODO Setup main.pd to run on boot?
-#echo ""
-#echo ""
