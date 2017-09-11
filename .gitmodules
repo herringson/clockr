@@ -1,6 +1,4 @@
 [submodule "abl_link"]
 	path = abl_link
 	url = https://github.com/libpd/abl_link.git
-[submodule "nanomsg"]
-	path = nanomsg
-	url = https://github.com/nanomsg/nanomsg.git
+
